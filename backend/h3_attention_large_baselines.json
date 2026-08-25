@@ -1,0 +1,129 @@
+{
+  "title": "H3 exact-BF16 attention backend benchmark",
+  "hardware": {
+    "python": "3.14.5",
+    "mlx": "0.32.0",
+    "device": {
+      "device_name": "Apple M4 Max",
+      "max_recommended_working_set_size": 115448725504,
+      "memory_size": 137438953472,
+      "architecture": "applegpu_g16s",
+      "max_buffer_length": 86586540032,
+      "resource_limit": 499000
+    }
+  },
+  "semantics": {
+    "dtype": "bfloat16",
+    "heads": 56,
+    "head_dim": 128,
+    "mask": null,
+    "causal": false,
+    "scale": 0.08838834764831845,
+    "softmax_accumulation": "float32 (MLX API contract)"
+  },
+  "mode_definitions": {
+    "baseline": "current production: contiguous BHSD + MLX fused SDPA",
+    "mlx_fused": "explicit control using the same official fused primitive",
+    "chunked_exact": "query slices, each evaluated by official fused SDPA"
+  },
+  "results": [
+    {
+      "workload": {
+        "name": "864x480_15s",
+        "width": 864,
+        "height": 480,
+        "frames": 362,
+        "text_tokens": 256,
+        "fps": 24,
+        "latent_t": 107,
+        "audio_t": 603,
+        "sequence": 44797
+      },
+      "q_shape": [
+        1,
+        56,
+        44797,
+        128
+      ],
+      "k_shape": [
+        1,
+        56,
+        44797,
+        128
+      ],
+      "v_shape": [
+        1,
+        56,
+        44797,
+        128
+      ],
+      "occurrences_per_h3_step": 50,
+      "attention_flops_per_call": 57538144104448,
+      "modes": {
+        "baseline": {
+          "samples_seconds": [
+            4.998732374981046,
+            5.008034208090976,
+            5.008927582995966
+          ],
+          "median_seconds": 5.008034208090976,
+          "mean_seconds": 5.005231388689329,
+          "best_seconds": 4.998732374981046,
+          "worst_seconds": 5.008927582995966,
+          "estimated_seconds_per_h3_step": 250.4017104045488,
+          "observed_tflops": 11.489167548314551,
+          "speedup_vs_baseline": 1.0
+        }
+      }
+    },
+    {
+      "workload": {
+        "name": "1920x1088_5s",
+        "width": 1920,
+        "height": 1088,
+        "frames": 124,
+        "text_tokens": 256,
+        "fps": 24,
+        "latent_t": 37,
+        "audio_t": 207,
+        "sequence": 76150
+      },
+      "q_shape": [
+        1,
+        56,
+        76150,
+        128
+      ],
+      "k_shape": [
+        1,
+        56,
+        76150,
+        128
+      ],
+      "v_shape": [
+        1,
+        56,
+        76150,
+        128
+      ],
+      "occurrences_per_h3_step": 50,
+      "attention_flops_per_call": 166263838720000,
+      "modes": {
+        "baseline": {
+          "samples_seconds": [
+            15.01740316604264,
+            15.027576042106375,
+            15.023980166995898
+          ],
+          "median_seconds": 15.023980166995898,
+          "mean_seconds": 15.022986458381638,
+          "best_seconds": 15.01740316604264,
+          "worst_seconds": 15.027576042106375,
+          "estimated_seconds_per_h3_step": 751.1990083497949,
+          "observed_tflops": 11.066564044409617,
+          "speedup_vs_baseline": 1.0
+        }
+      }
+    }
+  ]
+}

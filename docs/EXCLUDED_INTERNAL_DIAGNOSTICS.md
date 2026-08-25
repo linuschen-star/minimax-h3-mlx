@@ -1,0 +1,59 @@
+# Internal diagnostics excluded from public repository
+
+The known-good development snapshot contained forensic and parity-debug
+scripts created during the MiniMax H3 MLX port.
+
+They are intentionally excluded from the public Git repository because
+many contain machine-specific development paths and are not required
+for production inference.
+
+They remain preserved bit-for-bit in:
+
+minimax_h3_mlx-2026-08-25-clean-source.tar.gz
+
+SHA256:
+
+80906f592b30f4552f84972a2167dde4f2dad3332e8460381a6df3f295f05304
+
+Excluded backend/scripts files:
+
+backend/scripts/audit_all_block_boundaries.py
+backend/scripts/audit_sdpa_output_substitution.py
+backend/scripts/audit_teacher_forced_blocks.py
+backend/scripts/audit_teacher_forced_final_stage.py
+backend/scripts/capture_official_first_velocity.py
+backend/scripts/capture_official_full_smoke.py
+backend/scripts/capture_official_sampling_boundaries.py
+backend/scripts/compare_full_smoke_steps.py
+backend/scripts/compare_mlx_first_velocity.py
+backend/scripts/compare_mlx_sampling_boundaries.py
+backend/scripts/compare_official_mlx_step1_480p.py
+backend/scripts/compare_qkv_pre_rmsnorm_layouts.py
+backend/scripts/compare_qwen_picture_prompt_layers_480p.py
+backend/scripts/compare_semantic_conditioning_480p.py
+backend/scripts/decode_official_smoke.py
+backend/scripts/decode_saved_latent_official_comfy.py
+backend/scripts/forensics_dit_block1_qkv_weight.py
+backend/scripts/isolate_token_refiner_qkv_proj_480p.py
+backend/scripts/locate_first_step1_boundary_480p.py
+backend/scripts/locate_first_token_refiner_boundary_480p.py
+backend/scripts/locate_qwen_boundary_480p.py
+backend/scripts/official_480p_api.json
+backend/scripts/official_mlx_dit_block1_internal_api.json
+backend/scripts/official_mlx_dit_boundary_api.json
+backend/scripts/official_oracle_model_paths.yaml
+backend/scripts/official_token_refiner_api.json
+backend/scripts/prepare_official_480p_inputs.py
+backend/scripts/prepare_official_smoke_inputs.py
+backend/scripts/probe_mlx_residual_precision.py
+backend/scripts/probe_mlx_sdpa_stages.py
+backend/scripts/probe_official_residual_precision.py
+backend/scripts/probe_official_sdpa_stages.py
+backend/scripts/qkv_pre_rmsnorm_layout_comparison.json
+backend/scripts/run_mlx_480p_official_ab.py
+backend/scripts/run_production_mode_smoke.py
+backend/scripts/run_qkv_sign_matrix.py
+backend/scripts/run_sampling_stack_regression_ab.py
+backend/scripts/run_t2v_correctness_smoke.py
+backend/scripts/run_t2v_latent_vae_ab.py
+backend/scripts/sampling_boundary_parity.json

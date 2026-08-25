@@ -1,0 +1,18 @@
+MiniMax H3 MLX - Diagnostic binaries excluded from Git
+Preservation date: 2026-08-25
+
+These files existed in the trusted backend snapshot but are
+intentionally excluded from the GitHub source repository.
+
+They remain preserved in the trusted backend archive:
+
+minimax_h3_mlx-2026-08-25-clean-source.tar.gz
+SHA256:
+80906f592b30f4552f84972a2167dde4f2dad3332e8460381a6df3f295f05304
+
+Excluded diagnostic binaries:
+
+651629baeee351cecfe0c638f21aa2b633fba9ddf5e0789558c93c29271fbda0  47945958 bytes  backend/scripts/official_first_velocity.npz
+4b83f575df60941a3a7849cd0eec650ac647f7310d419cf3ba61f604575baad1  591736 bytes  backend/scripts/official_residual_precision.safetensors
+5ad56d883cb885d1e8974f5313cd7b4ea9a2d5696d91fa8532127eef3ba2b4c6  115052 bytes  backend/scripts/official_sampling_boundaries.npz
+dd7195f759713ff958d64c6b41becffd57019c0aedd627ee98d6952ac8edf6d6  1289528 bytes  backend/scripts/official_sdpa_stages.safetensors

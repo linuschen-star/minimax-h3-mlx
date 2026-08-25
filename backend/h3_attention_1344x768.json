@@ -1,0 +1,116 @@
+{
+  "title": "H3 exact-BF16 attention backend benchmark",
+  "hardware": {
+    "python": "3.14.5",
+    "mlx": "0.32.0",
+    "device": {
+      "device_name": "Apple M4 Max",
+      "max_recommended_working_set_size": 115448725504,
+      "memory_size": 137438953472,
+      "architecture": "applegpu_g16s",
+      "max_buffer_length": 86586540032,
+      "resource_limit": 499000
+    }
+  },
+  "semantics": {
+    "dtype": "bfloat16",
+    "heads": 56,
+    "head_dim": 128,
+    "mask": null,
+    "causal": false,
+    "scale": 0.08838834764831845,
+    "softmax_accumulation": "float32 (MLX API contract)"
+  },
+  "mode_definitions": {
+    "baseline": "current production: contiguous BHSD + MLX fused SDPA",
+    "mlx_fused": "explicit control using the same official fused primitive",
+    "chunked_exact": "query slices, each evaluated by official fused SDPA"
+  },
+  "results": [
+    {
+      "workload": {
+        "name": "1344x768_5s",
+        "width": 1344,
+        "height": 768,
+        "frames": 124,
+        "text_tokens": 256,
+        "fps": 24,
+        "latent_t": 37,
+        "audio_t": 207,
+        "sequence": 37966
+      },
+      "q_shape": [
+        1,
+        56,
+        37966,
+        128
+      ],
+      "k_shape": [
+        1,
+        56,
+        37966,
+        128
+      ],
+      "v_shape": [
+        1,
+        56,
+        37966,
+        128
+      ],
+      "occurrences_per_h3_step": 50,
+      "attention_flops_per_call": 41328312696832,
+      "modes": {
+        "baseline": {
+          "samples_seconds": [
+            3.564249334158376,
+            3.553881833096966,
+            3.563055458944291
+          ],
+          "median_seconds": 3.563055458944291,
+          "mean_seconds": 3.5603955420665443,
+          "best_seconds": 3.553881833096966,
+          "worst_seconds": 3.564249334158376,
+          "estimated_seconds_per_h3_step": 178.15277294721454,
+          "observed_tflops": 11.59912136452608,
+          "speedup_vs_baseline": 1.0
+        },
+        "chunked_exact": {
+          "2048": {
+            "samples_seconds": [
+              3.640311083989218,
+              3.677781250094995,
+              3.691253541968763
+            ],
+            "median_seconds": 3.677781250094995,
+            "mean_seconds": 3.669781958684325,
+            "best_seconds": 3.640311083989218,
+            "worst_seconds": 3.691253541968763,
+            "bit_exact": true,
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "estimated_seconds_per_h3_step": 183.88906250474975,
+            "speedup_vs_baseline": 0.9688057055737774,
+            "dispatches_per_call": 19
+          },
+          "4096": {
+            "samples_seconds": [
+              3.6212222499307245,
+              3.641846708022058,
+              3.627730750013143
+            ],
+            "median_seconds": 3.627730750013143,
+            "mean_seconds": 3.630266569321975,
+            "best_seconds": 3.6212222499307245,
+            "worst_seconds": 3.641846708022058,
+            "bit_exact": true,
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "estimated_seconds_per_h3_step": 181.38653750065714,
+            "speedup_vs_baseline": 0.9821719704339641,
+            "dispatches_per_call": 10
+          }
+        }
+      }
+    }
+  ]
+}

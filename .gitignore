@@ -1,0 +1,42 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Generated outputs
+output/
+outputs/
+tmp/
+temp/
+cache/
+logs/
+
+# Models / checkpoints
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.gguf
+
+# Large generated media / diagnostics
+*.mp4
+*.mov
+*.wav
+*.npz
+
+# Local environment
+.env
+.env.*
+*.npy

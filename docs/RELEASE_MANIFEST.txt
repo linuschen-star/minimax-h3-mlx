@@ -1,0 +1,16 @@
+MiniMax H3 MLX staging baseline
+Date: 2026-08-25
+
+Trusted backend archive:
+SHA256 80906f592b30f4552f84972a2167dde4f2dad3332e8460381a6df3f295f05304
+
+Trusted ComfyUI integration archive:
+SHA256 d1410750bac3fa911db048d8f73098cc43d7d7487b4090941155a92b091a5ff1
+
+Trusted verified T2V evidence archive:
+SHA256 8f52c2951c54261be99dd0589a37d51c74c2efebc87dc11b20ae1a909deb35e3
+
+Validation status:
+T2V = VERIFIED PASS
+I2V = PRESERVED / NOT CLAIMED VERIFIED
+R2V = PRESERVED / NOT CLAIMED VERIFIED

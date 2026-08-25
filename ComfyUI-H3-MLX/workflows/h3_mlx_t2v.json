@@ -1,0 +1,486 @@
+{
+  "id": "1948f405-094d-469e-a3c3-a46fe62238c9",
+  "revision": 0,
+  "last_node_id": 9,
+  "last_link_id": 9,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MarkdownNote",
+      "pos": [
+        40,
+        30
+      ],
+      "size": [
+        650,
+        180
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MarkdownNote"
+      },
+      "widgets_values": [
+        "## MiniMax H3 — Native MLX T2V\nBase BF16 full attention on Apple Silicon. Text-only requests internally use the official first+last compatibility frames; no image input is required. Output contains H.264 video and synchronized stereo AAC audio."
+      ],
+      "title": "MiniMax H3 — Native MLX T2V",
+      "color": "#243447",
+      "bgcolor": "#172331"
+    },
+    {
+      "id": 2,
+      "type": "H3MLXModelLoader",
+      "pos": [
+        40,
+        270
+      ],
+      "size": [
+        390,
+        100
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "h3_mlx_model",
+          "type": "H3_MLX_MODEL",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MLXModelLoader"
+      },
+      "widgets_values": [
+        "MiniMax-H3"
+      ],
+      "title": "1 · Load native MLX model"
+    },
+    {
+      "id": 3,
+      "type": "H3MLXTextConditioning",
+      "pos": [
+        470,
+        270
+      ],
+      "size": [
+        620,
+        520
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "H3_MLX_CONDITIONING",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MLXTextConditioning"
+      },
+      "widgets_values": [
+        "Describe the scene, action, camera, dialogue, ambience, music, and sound effects."
+      ],
+      "title": "2 · Raw prompt (passed unchanged)"
+    },
+    {
+      "id": 4,
+      "type": "H3MLXResolution",
+      "pos": [
+        40,
+        450
+      ],
+      "size": [
+        390,
+        180
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MLXResolution"
+      },
+      "widgets_values": [
+        "16:9 landscape — 832×480",
+        832,
+        480
+      ],
+      "title": "3 · Resolution / aspect ratio"
+    },
+    {
+      "id": 5,
+      "type": "H3MLXDuration",
+      "pos": [
+        40,
+        700
+      ],
+      "size": [
+        390,
+        120
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "valid_frames",
+          "type": "INT",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "actual_seconds",
+          "type": "FLOAT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MLXDuration"
+      },
+      "widgets_values": [
+        5.0
+      ],
+      "title": "4 · Duration (seconds)"
+    },
+    {
+      "id": 6,
+      "type": "H3MLXGenerationSettings",
+      "pos": [
+        470,
+        680
+      ],
+      "size": [
+        420,
+        360
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 1
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 2
+        },
+        {
+          "name": "frames",
+          "type": "INT",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generation_settings",
+          "type": "H3_MLX_SETTINGS",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MLXGenerationSettings"
+      },
+      "widgets_values": [
+        "bfloat16",
+        "none",
+        "none",
+        "res_multistep",
+        "beta",
+        "mlx_fused_full_sdpa",
+        20,
+        0,
+        "randomize"
+      ],
+      "title": "5 · Sampling settings"
+    },
+    {
+      "id": 7,
+      "type": "H3MLXGenerate",
+      "pos": [
+        1160,
+        350
+      ],
+      "size": [
+        430,
+        180
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "h3_mlx_model",
+          "type": "H3_MLX_MODEL",
+          "link": 6
+        },
+        {
+          "name": "conditioning",
+          "type": "H3_MLX_CONDITIONING",
+          "link": 7
+        },
+        {
+          "name": "generation_settings",
+          "type": "H3_MLX_SETTINGS",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MLXGenerate"
+      },
+      "widgets_values": [],
+      "title": "6 · Native MLX sample + AV decode"
+    },
+    {
+      "id": 8,
+      "type": "H3MLXOutput",
+      "pos": [
+        1660,
+        350
+      ],
+      "size": [
+        430,
+        150
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mp4_path",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "diagnostics_path",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "step_timings",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "H3MLXOutput"
+      },
+      "widgets_values": [
+        "h3_mlx/t2v/H3"
+      ],
+      "title": "7 · Preview / save audiovisual MP4"
+    },
+    {
+      "id": 9,
+      "type": "MarkdownNote",
+      "pos": [
+        1160,
+        610
+      ],
+      "size": [
+        930,
+        220
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MarkdownNote"
+      },
+      "widgets_values": [
+        "### Controls\n- The prompt is passed to the tokenizer byte-for-byte as entered; this workflow does not rewrite it.\n- T2V compatibility frames are fixed internal conditioning inputs and are not user prompt content.\n- **Duration:** automatically snaps to the nearest valid `17n+5` frame count at 24 fps.\n- **Steps:** production Base uses 20.\n- **Seed:** supports ComfyUI randomize-after-run behavior.\n\nNo Torch latent or frame is created in the generation path."
+      ],
+      "title": "Usage",
+      "color": "#303030",
+      "bgcolor": "#202020"
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      6,
+      0,
+      "INT"
+    ],
+    [
+      2,
+      4,
+      1,
+      6,
+      1,
+      "INT"
+    ],
+    [
+      3,
+      5,
+      0,
+      6,
+      2,
+      "INT"
+    ],
+    [
+      6,
+      2,
+      0,
+      7,
+      0,
+      "H3_MLX_MODEL"
+    ],
+    [
+      7,
+      3,
+      0,
+      7,
+      1,
+      "H3_MLX_CONDITIONING"
+    ],
+    [
+      8,
+      6,
+      0,
+      7,
+      2,
+      "H3_MLX_SETTINGS"
+    ],
+    [
+      9,
+      7,
+      0,
+      8,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "INPUT / MODEL",
+      "bounding": [
+        20,
+        240,
+        430,
+        610
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "PROMPT / CONDITIONING",
+      "bounding": [
+        450,
+        240,
+        660,
+        390
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "SAMPLING",
+      "bounding": [
+        450,
+        650,
+        460,
+        310
+      ],
+      "color": "#8b6f47",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "NATIVE MLX GENERATION",
+      "bounding": [
+        1140,
+        320,
+        470,
+        240
+      ],
+      "color": "#5d7f55",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "VIDEO + AUDIO OUTPUT",
+      "bounding": [
+        1640,
+        320,
+        470,
+        240
+      ],
+      "color": "#8a5064",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.72,
+      "offset": [
+        130,
+        80
+      ]
+    }
+  },
+  "version": 0.4
+}
