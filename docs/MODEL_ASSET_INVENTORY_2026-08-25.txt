@@ -1,0 +1,219 @@
+MiniMax H3 MLX Model Asset Inventory
+Date: 2026-08-25
+
+Known-good Git commit:
+947257ca44e16fe2707988d4e524583b12078bcf
+
+Expected bundle structure:
+FL2VA/transformer
+FL2VA/text_encoder
+FL2VA/audio_vae
+Ref2VA/transformer
+vae
+
+NOTE:
+Large model weights are NOT stored in Git.
+Large model weights are NOT copied by this inventory.
+Large safetensors are listed by filename and byte size only.
+
+==================================================
+FILES
+==================================================
+
+BYTES=1  .cache/huggingface/.gitignore
+BYTES=191  .cache/huggingface/CACHEDIR.TAG
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/config.json.lock
+BYTES=101  .cache/huggingface/download/FL2VA/audio_vae/config.json.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/config.yaml.lock
+BYTES=101  .cache/huggingface/download/FL2VA/audio_vae/config.yaml.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_activations.py.lock
+BYTES=101  .cache/huggingface/download/FL2VA/audio_vae/dac_activations.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_alias_free_act.py.lock
+BYTES=101  .cache/huggingface/download/FL2VA/audio_vae/dac_alias_free_act.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_alias_free_filter.py.lock
+BYTES=99  .cache/huggingface/download/FL2VA/audio_vae/dac_alias_free_filter.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_alias_free_resample.py.lock
+BYTES=100  .cache/huggingface/download/FL2VA/audio_vae/dac_alias_free_resample.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_attn_proj.py.lock
+BYTES=100  .cache/huggingface/download/FL2VA/audio_vae/dac_attn_proj.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_audio_vae.py.lock
+BYTES=99  .cache/huggingface/download/FL2VA/audio_vae/dac_audio_vae.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_bigvgan.py.lock
+BYTES=100  .cache/huggingface/download/FL2VA/audio_vae/dac_bigvgan.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/dac_utils.py.lock
+BYTES=100  .cache/huggingface/download/FL2VA/audio_vae/dac_utils.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/metadata.json.lock
+BYTES=100  .cache/huggingface/download/FL2VA/audio_vae/metadata.json.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/minimax_h3_audio_vae.py.lock
+BYTES=100  .cache/huggingface/download/FL2VA/audio_vae/minimax_h3_audio_vae.py.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/audio_vae/model.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/audio_vae/model.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/config.json.lock
+BYTES=100  .cache/huggingface/download/FL2VA/text_encoder/config.json.metadata
+BYTES=3261521649  .cache/huggingface/download/FL2VA/text_encoder/FeBMD7IVMpiZ2fE6T2dpeI9Q11k=.aded5a4d1d5e22dbd8b6f79266b6eb88c840411b09527c53917a1419ace22e2f.e76c00cb.incomplete
+BYTES=2235477319  .cache/huggingface/download/FL2VA/text_encoder/fLViwTrXLyVARzBTm5JRcVuyOYI=.3820ffe8d8d6477f6fe8d614ef3c87abb264ee39accebf43a1507b970d80946f.7fb7bafe.incomplete
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00001-of-00014.safetensors.lock
+BYTES=123  .cache/huggingface/download/FL2VA/text_encoder/model-00001-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00002-of-00014.safetensors.lock
+BYTES=125  .cache/huggingface/download/FL2VA/text_encoder/model-00002-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00003-of-00014.safetensors.lock
+BYTES=125  .cache/huggingface/download/FL2VA/text_encoder/model-00003-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00004-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00004-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00005-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00005-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00006-of-00014.safetensors.lock
+BYTES=123  .cache/huggingface/download/FL2VA/text_encoder/model-00006-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00007-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00007-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00008-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00008-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00009-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00009-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00010-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00010-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00011-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00011-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model-00014-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/text_encoder/model-00014-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/model.safetensors.index.json.lock
+BYTES=100  .cache/huggingface/download/FL2VA/text_encoder/model.safetensors.index.json.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/text_encoder/tokenizer.json.lock
+BYTES=100  .cache/huggingface/download/FL2VA/text_encoder/tokenizer.json.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/config.json.lock
+BYTES=101  .cache/huggingface/download/FL2VA/transformer/config.json.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00001-of-00013.safetensors.lock
+BYTES=125  .cache/huggingface/download/FL2VA/transformer/model-00001-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00002-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00002-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00003-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00003-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00004-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00004-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00005-of-00013.safetensors.lock
+BYTES=125  .cache/huggingface/download/FL2VA/transformer/model-00005-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00006-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00006-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00007-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00007-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00008-of-00013.safetensors.lock
+BYTES=125  .cache/huggingface/download/FL2VA/transformer/model-00008-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00009-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00009-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00010-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00010-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00011-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00011-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00012-of-00013.safetensors.lock
+BYTES=125  .cache/huggingface/download/FL2VA/transformer/model-00012-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model-00013-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/FL2VA/transformer/model-00013-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/FL2VA/transformer/model.safetensors.index.json.lock
+BYTES=99  .cache/huggingface/download/FL2VA/transformer/model.safetensors.index.json.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/config.json.lock
+BYTES=100  .cache/huggingface/download/Ref2VA/transformer/config.json.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00001-of-00013.safetensors.lock
+BYTES=123  .cache/huggingface/download/Ref2VA/transformer/model-00001-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00002-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00002-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00003-of-00013.safetensors.lock
+BYTES=125  .cache/huggingface/download/Ref2VA/transformer/model-00003-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00004-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00004-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00005-of-00013.safetensors.lock
+BYTES=123  .cache/huggingface/download/Ref2VA/transformer/model-00005-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00006-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00006-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00007-of-00013.safetensors.lock
+BYTES=122  .cache/huggingface/download/Ref2VA/transformer/model-00007-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00008-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00008-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00009-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00009-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00010-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00010-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00011-of-00013.safetensors.lock
+BYTES=125  .cache/huggingface/download/Ref2VA/transformer/model-00011-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00012-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00012-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model-00013-of-00013.safetensors.lock
+BYTES=124  .cache/huggingface/download/Ref2VA/transformer/model-00013-of-00013.safetensors.metadata
+BYTES=0  .cache/huggingface/download/Ref2VA/transformer/model.safetensors.index.json.lock
+BYTES=100  .cache/huggingface/download/Ref2VA/transformer/model.safetensors.index.json.metadata
+BYTES=0  .cache/huggingface/download/transformer/diffusion_pytorch_model-00001-of-00014.safetensors.lock
+BYTES=124  .cache/huggingface/download/transformer/diffusion_pytorch_model-00001-of-00014.safetensors.metadata
+BYTES=0  .cache/huggingface/download/vae/config.json.lock
+BYTES=101  .cache/huggingface/download/vae/config.json.metadata
+BYTES=0  .cache/huggingface/download/vae/diffusion_pytorch_model-00001-of-00003.safetensors.lock
+BYTES=124  .cache/huggingface/download/vae/diffusion_pytorch_model-00001-of-00003.safetensors.metadata
+BYTES=0  .cache/huggingface/download/vae/diffusion_pytorch_model-00002-of-00003.safetensors.lock
+BYTES=124  .cache/huggingface/download/vae/diffusion_pytorch_model-00002-of-00003.safetensors.metadata
+BYTES=0  .cache/huggingface/download/vae/diffusion_pytorch_model-00003-of-00003.safetensors.lock
+BYTES=124  .cache/huggingface/download/vae/diffusion_pytorch_model-00003-of-00003.safetensors.metadata
+BYTES=0  .cache/huggingface/download/vae/diffusion_pytorch_model.safetensors.index.json.lock
+BYTES=101  .cache/huggingface/download/vae/diffusion_pytorch_model.safetensors.index.json.metadata
+SHA256=87d68ea8fca6a1e80bb6cbb712f3c2df81608f769b85d434c5ec61ac8c5253ac  BYTES=60097  .cache/huggingface/trees/42ed227ee7df40d41602854ae760620d6eb651fe.json
+SHA256=d8f3bcc62e23c7e9806970fa63cca6139c06faa3797cf9c94034f60db8512771  BYTES=1973  FL2VA/audio_vae/config.json
+SHA256=259f675c9f71eedc24ca4f23965cd32a1b3878fc894f56664c40328d99831a5e  BYTES=91  FL2VA/audio_vae/config.yaml
+BYTES=2189  FL2VA/audio_vae/dac_activations.py
+BYTES=835  FL2VA/audio_vae/dac_alias_free_act.py
+BYTES=3300  FL2VA/audio_vae/dac_alias_free_filter.py
+BYTES=1740  FL2VA/audio_vae/dac_alias_free_resample.py
+BYTES=3317  FL2VA/audio_vae/dac_attn_proj.py
+BYTES=7266  FL2VA/audio_vae/dac_audio_vae.py
+BYTES=7102  FL2VA/audio_vae/dac_bigvgan.py
+BYTES=362  FL2VA/audio_vae/dac_utils.py
+SHA256=755d0529d43b2b5c83590f6f44ca659bc68e6a21b01d5669c93e8b2965749bff  BYTES=440  FL2VA/audio_vae/metadata.json
+BYTES=3532  FL2VA/audio_vae/minimax_h3_audio_vae.py
+BYTES=605429308  FL2VA/audio_vae/model.safetensors
+SHA256=d2dd0c60d01b9e195d9447c52da61c7302d28828524914c044d9c6e1b81d0427  BYTES=1474  FL2VA/text_encoder/config.json
+BYTES=4932328944  FL2VA/text_encoder/model-00001-of-00014.safetensors
+BYTES=4875990528  FL2VA/text_encoder/model-00002-of-00014.safetensors
+BYTES=4875990552  FL2VA/text_encoder/model-00003-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00004-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00005-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00006-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00007-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00008-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00009-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00010-of-00014.safetensors
+BYTES=4875990584  FL2VA/text_encoder/model-00011-of-00014.safetensors
+BYTES=3270697008  FL2VA/text_encoder/model-00014-of-00014.safetensors
+SHA256=06c952c569285870b811989b794b9766493e280fb77fbcb957fc4e5fcf25403a  BYTES=97831  FL2VA/text_encoder/model.safetensors.index.json
+SHA256=a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7  BYTES=7032403  FL2VA/text_encoder/tokenizer.json
+SHA256=f619093a231fcfbcc3d035bec26c50ad864e7331a500d5c519f5045dc1e50458  BYTES=604  FL2VA/transformer/config.json
+BYTES=5227812968  FL2VA/transformer/model-00001-of-00013.safetensors
+BYTES=5164578856  FL2VA/transformer/model-00002-of-00013.safetensors
+BYTES=5164578872  FL2VA/transformer/model-00003-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00004-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00005-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00006-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00007-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00008-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00009-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00010-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00011-of-00013.safetensors
+BYTES=5164578896  FL2VA/transformer/model-00012-of-00013.safetensors
+BYTES=4242305176  FL2VA/transformer/model-00013-of-00013.safetensors
+SHA256=fb457a26ffa6294660e249b0ddd03a337f2e5393f770b5c34c8b8f90a29a7efb  BYTES=38323  FL2VA/transformer/model.safetensors.index.json
+SHA256=f619093a231fcfbcc3d035bec26c50ad864e7331a500d5c519f5045dc1e50458  BYTES=604  Ref2VA/transformer/config.json
+BYTES=5227812968  Ref2VA/transformer/model-00001-of-00013.safetensors
+BYTES=5164578856  Ref2VA/transformer/model-00002-of-00013.safetensors
+BYTES=5164578872  Ref2VA/transformer/model-00003-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00004-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00005-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00006-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00007-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00008-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00009-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00010-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00011-of-00013.safetensors
+BYTES=5164578896  Ref2VA/transformer/model-00012-of-00013.safetensors
+BYTES=4242305176  Ref2VA/transformer/model-00013-of-00013.safetensors
+SHA256=fb457a26ffa6294660e249b0ddd03a337f2e5393f770b5c34c8b8f90a29a7efb  BYTES=38323  Ref2VA/transformer/model.safetensors.index.json
+BYTES=4825958704  transformer/diffusion_pytorch_model-00001-of-00014.safetensors
+SHA256=78f67deec3d63aae807f2bfe7154bc1e26f6372cb20b63265fcbae1b62bb5745  BYTES=2011  vae/config.json
+BYTES=5061033024  vae/diffusion_pytorch_model-00001-of-00003.safetensors
+BYTES=4955986528  vae/diffusion_pytorch_model-00002-of-00003.safetensors
+BYTES=398539336  vae/diffusion_pytorch_model-00003-of-00003.safetensors
+SHA256=15f6d44553c3c616b0dc999920aa784f92ecee7e4201f1f99ac405cfbf3061ca  BYTES=74228  vae/diffusion_pytorch_model.safetensors.index.json
